@@ -19,6 +19,7 @@ jobs:
       # Install and build Docusaurus website
       - name: Build Docusaurus website
         run: |
+          ls -la
           cd IgniteResearch
           npm install 
           npm run build
