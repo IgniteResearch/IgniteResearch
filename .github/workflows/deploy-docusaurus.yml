@@ -20,7 +20,6 @@ jobs:
       - name: Build Docusaurus website
         run: |
           ls -la
-          cd IgniteResearch
           npm install 
           npm run build
           echo 'igniteresearch.in' > build/CNAME
@@ -29,6 +28,6 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
-          build_dir: website/build
+          build_dir: build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
