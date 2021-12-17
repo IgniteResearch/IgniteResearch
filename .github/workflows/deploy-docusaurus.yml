@@ -19,7 +19,7 @@ jobs:
       # Install and build Docusaurus website
       - name: Build Docusaurus website
         run: |
-          cd website
+          cd IgniteResearch
           npm install 
           npm run build
           echo 'igniteresearch.in' > build/CNAME
