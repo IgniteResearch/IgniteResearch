@@ -1,7 +1,7 @@
 name: deploy-docusaurus
 
 on:
-  pull_request:
+  push:
     branches:
       - main
   workflow_dispatch:
