@@ -69,65 +69,15 @@ const config = {
           {
             title: 'IGNITE RESEARCH',
             items: [
+              
               {
                 html: `
-                <!-- Messenger Chat Plugin Code -->
-    <div id="fb-root"></div>
-
-    <!-- Your Chat Plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
-
-    <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "1970159599725916");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
-
-    <!-- Your SDK code -->
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v12.0'
-        });
-      };
-
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-                `,
-              },
-              {
-                html: `
-                <!-- Add font awesome icons -->
-<a href="#" class="fa fa-facebook" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 30px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 40px;text-align: center;text-decoration: none;margin: 4px 1px;background: #3B5998;color: white;"></a>
-<a href="#" class="fa fa-twitter" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 30px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 40px;text-align: center;text-decoration: none;margin: 4px 1px;background: #55ACEE;color: white;"></a>
-<a href="#" class="fa fa-google" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 30px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 40px;text-align: center;text-decoration: none;margin: 4px 1px;background: #dd4b39;color: white;"></a>
-<a href="#" class="fa fa-linkedin" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 30px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 40px;text-align: center;text-decoration: none;margin: 4px 1px;background: #007bb5;color: white;"></a>
-<a href="#" class="fa fa-youtube" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 30px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 40px;text-align: center;text-decoration: none;margin: 4px 1px;background: #bb0000;color: white;"></a>
-<a href="#" class="fa fa-instagram" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 30px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 40px;text-align: center;text-decoration: none;margin: 4px 1px;background: #125688;color: white;"></a>
-<a href="#" class="fa fa-pinterest" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 30px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 40px;text-align: center;text-decoration: none;margin: 4px 1px;background: #cb2027;color: white;"></a>
-<a href="#" class="fa fa-snapchat-ghost" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 30px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 40px;text-align: center;text-decoration: none;margin: 4px 1px;background: #fffc00;color: white;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"></a>
-<a href="#" class="fa fa-skype" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 30px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 40px;text-align: center;text-decoration: none;margin: 4px 1px;background: #00aff0;color: white;"></a>
-<a href="#" class="fa fa-android" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 30px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 40px;text-align: center;text-decoration: none;margin: 4px 1px;background: #a4c639;color: white;"></a>
-<a href="#" class="fa fa-dribbble" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 30px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 40px;text-align: center;text-decoration: none;margin: 4px 1px;background: #ea4c89;color: white;"></a>
-<a href="#" class="fa fa-vimeo" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 30px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 40px;text-align: center;text-decoration: none;margin: 4px 1px;background: #45bbff;color: white;"></a>
-<a href="#" class="fa fa-tumblr" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 30px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 40px;text-align: center;text-decoration: none;margin: 4px 1px;background: #2c4762;color: white;"></a>
-<a href="#" class="fa fa-vine" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 30px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 40px;text-align: center;text-decoration: none;margin: 4px 1px;background: #00b489;color: white;"></a>
-<a href="#" class="fa fa-foursquare" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 30px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 40px;text-align: center;text-decoration: none;margin: 4px 1px;background: #45bbff;color: white;"></a>
-<a href="#" class="fa fa-stumbleupon" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 30px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 40px;text-align: center;text-decoration: none;margin: 4px 1px;background: #eb4924;color: white;"></a>
-<a href="#" class="fa fa-flickr" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 30px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 40px;text-align: center;text-decoration: none;margin: 4px 1px;background: #f40083;color: white;"></a>
-<a href="#" class="fa fa-yahoo" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 30px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 40px;text-align: center;text-decoration: none;margin: 4px 1px;background: #430297;color: white;"></a>
-<a href="#" class="fa fa-reddit" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 30px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 40px;text-align: center;text-decoration: none;margin: 4px 1px;background: #ff5700;color: white;"></a>
-<a href="#" class="fa fa-rss" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 30px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 40px;text-align: center;text-decoration: none;margin: 4px 1px;background: #ff6600;color: white;"></a>
-`,
-              },
+<a href="https://www.facebook.com/ResearchPublicationConsultancy" class="fa fa-facebook" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 16px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 30px;text-align: center;text-decoration: none;margin: 5px 2px;background: #3B5998;color: white;" target="_blank"></a>
+<a href="https://twitter.com/igniteresearch_" class="fa fa-twitter" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 16px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 30px;text-align: center;text-decoration: none;margin: 5px 2px;background: #55ACEE;color: white;" target="_blank"></a>
+<a href="https://www.google.com/maps/dir/14.4568814,79.9975806/ignite+research/@14.4543688,79.9952558,17z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3a4c8cade7934153:0x8ec28f4c42f358e8!2m2!1d79.9959273!2d14.4518923" class="fa fa-map-marker" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 16px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 30px;text-align: center;text-decoration: none;margin: 5px 2px;background: #dd4b39;color: white;" target="_blank"></a>
+<a href="https://www.linkedin.com/company/igniteresearch-india" class="fa fa-linkedin" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 16px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 30px;text-align: center;text-decoration: none;margin: 5px 2px;background: #007bb5;color: white;" target="_blank"></a>
+<a href="https://www.youtube.com/channel/UCqED2kjOm3ruDBF9ivjOovQ" class="fa fa-youtube" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 16px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 30px;text-align: center;text-decoration: none;margin: 5px 2px;background: #bb0000;color: white;" target="_blank"></a>
+`    },
               {
                 label: 'Tutorial',
                 to: '/docs/intro',
