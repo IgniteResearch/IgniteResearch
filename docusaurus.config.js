@@ -34,14 +34,14 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-          
+
       }),
     ],
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      
+
       navbar: {
         title: 'IGNITE RESEARCH',
         logo: {
@@ -69,7 +69,40 @@ const config = {
           {
             title: 'IGNITE RESEARCH',
             items: [
-              
+              {
+                html: `
+                <!-- Messenger Chat Plugin Code -->
+                <div id="fb-root"></div>
+
+                <!-- Your Chat Plugin code -->
+                <div id="fb-customer-chat" class="fb-customerchat">
+                </div>
+
+                <script>
+                  var chatbox = document.getElementById('fb-customer-chat');
+                  chatbox.setAttribute("page_id", "1970159599725916");
+                  chatbox.setAttribute("attribution", "biz_inbox");
+                </script>
+
+                <!-- Your SDK code -->
+                <script>
+                  window.fbAsyncInit = function() {
+                    FB.init({
+                      xfbml            : true,
+                      version          : 'v12.0'
+                    });
+                  };
+
+                  (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                  }(document, 'script', 'facebook-jssdk'));
+                </script>
+                `,
+              },
               {
                 html: `
 <a href="https://www.facebook.com/ResearchPublicationConsultancy" class="fa fa-facebook" style="display: inline-block;font: normal normal normal 14px/1 FontAwesome;font-size: 16px;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;padding: 10px;width: 30px;text-align: center;text-decoration: none;margin: 5px 2px;background: #3B5998;color: white;" target="_blank"></a>
