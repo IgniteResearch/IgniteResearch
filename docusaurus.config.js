@@ -173,7 +173,7 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       facebookChat: {
-        page_id: 'UA-141789564-1'
+        page_id: '1970159599725916'
       },
     }),
 };
