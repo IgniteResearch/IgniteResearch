@@ -1635,14 +1635,12 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
   integrity sha512-9NET910DNaIPngYnLLPeg+Ogzqsi9uM4mSboU5y6p8S5DzMTVEsJZrawi+BoDNUVBa2DhJqQYUFvMDfgU062LQ==
 
-"@skgandikota/docusaurus-plugin-facebook-chat@^0.0.0-draft002":
+"@skgandikota/docusaurus-plugin-facebookchat@^0.0.0-draft002":
   version "0.0.0-draft002"
-  resolved "https://registry.yarnpkg.com/@skgandikota/docusaurus-plugin-facebook-chat/-/docusaurus-plugin-facebook-chat-0.0.0-draft002.tgz#c1dcc189d6ea299457ee3e387eda8285e5c917e9"
-  integrity sha512-5M2fd1PwcXf09/3SLsywPM7I0FYhVpx+YjbM8vlwTZhyziDToJnDVdwOq9rso326cytosWqM/ZRpIgOvHGaCDA==
+  resolved "https://registry.yarnpkg.com/@skgandikota/docusaurus-plugin-facebookchat/-/docusaurus-plugin-facebookchat-0.0.0-draft002.tgz#57bd46dd79577f1f68448b516e561f0fcc927ce0"
+  integrity sha512-eRGnWHs/Yi36dNsiImmEeoZtwa7GqSu8IrYdY9I8naWgBa75ll0vHzJx0Ypv2GE6LW7T8OofAMA2xUAtseQ7qQ==
   dependencies:
     "@docusaurus/core" "2.0.0-beta.14"
-    "@docusaurus/utils-validation" "2.0.0-beta.14"
-    tslib "^2.3.1"
 
 "@slorber/static-site-generator-webpack-plugin@^4.0.0":
   version "4.0.1"
