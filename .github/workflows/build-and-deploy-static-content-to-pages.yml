@@ -36,8 +36,11 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "16"
+          cache: "npm"
       - name: Build & deploy
         run: |
+          rm -rf .git
+          git init
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/dev-ir-web-app.git
           npm install && npm run-script deploy -- -u "github-actions-bot <support+actions@github.com>"
         env:
@@ -53,6 +56,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "16"
+          cache: "npm"
       - name: Build & Generate Static Site for prod
         run: |
           npm install 
