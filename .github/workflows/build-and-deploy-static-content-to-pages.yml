@@ -38,7 +38,8 @@ jobs:
           node-version: "16"
       - name: Build & deploy
         run: |
-          npm install && npm run-script deploy
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/dev-ir-web-app.git
+          npm install && npm run-script deploy -- -u "github-actions-bot <support+actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.SAML_GITHUB_TOKEN }}
   deploy-to-prod:
