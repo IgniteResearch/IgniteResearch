@@ -39,6 +39,8 @@ jobs:
       - name: Build & deploy
         run: |
           npm install && npm run-script deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.SAML_GITHUB_TOKEN }}
   deploy-to-prod:
     needs: deploy-to-dev
     environment:
