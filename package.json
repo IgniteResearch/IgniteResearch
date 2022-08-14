@@ -14,7 +14,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "echo 'dev.igniteresearch.in' > ./build/CNAME && gh-pages -b main -d build --repo https://github.com/IgniteResearch/dev-ir-web-app.git --user  ",
+    "deploy": "echo 'dev.igniteresearch.in' > ./build/CNAME && gh-pages -b main -d build --repo https://github.com/IgniteResearch/dev-ir-web-app.git ",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
