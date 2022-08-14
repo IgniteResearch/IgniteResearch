@@ -39,9 +39,12 @@ jobs:
           cache: "npm"
       - name: Build & deploy
         run: |
+          ls -la
           cd ../
-          mkdir new && cd new
-          mv ../igniteresearch/*  ./
+          mkdir new
+          ls -la 
+          cd new
+          mv ../IgniteResearch/*  ./
           ls -la
           git remote remove origin
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/dev-ir-web-app.git
