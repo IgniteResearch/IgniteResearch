@@ -36,9 +36,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "16"
-      - name: Build & Generate Static Site for dev
+      - name: Build & deploy
         run: |
-          npm run-script deploy
+          npm install && npm run-script deploy
   deploy-to-prod:
     needs: deploy-to-dev
     environment:
