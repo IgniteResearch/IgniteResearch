@@ -29,11 +29,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy-to-dev:
-    environment:
-      name: github-pages
-      url: "dev.igniteresearch.in"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -42,24 +38,12 @@ jobs:
           node-version: "16"
       - name: Build & Generate Static Site for dev
         run: |
-          npm install 
-          npm run build
-          echo 'dev.igniteresearch.in' > build/CNAME
-      - name: Setup Pages
-        uses: actions/configure-pages@v1
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: "build"
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@main
+          npm run-script deploy
   deploy-to-prod:
     needs: deploy-to-dev
     environment:
       name: github-pages
-      # url: ${{ steps.deployment.outputs.page_url }}
-      url: "igniteresearch.in"
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
