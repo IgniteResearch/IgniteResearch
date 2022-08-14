@@ -14,6 +14,6 @@ jobs:
           # The name of the repository.
           repository: ${{ github.repository }}
           # The number of days.
-          retain_days: 1
+          retain_days: 0
           # The minimum runs to keep for each workflow.
-          keep_minimum_runs: 1
+          keep_minimum_runs: 0
