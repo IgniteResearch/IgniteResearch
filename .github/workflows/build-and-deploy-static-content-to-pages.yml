@@ -34,7 +34,7 @@ jobs:
     steps:
       - name: Dev Deployment initiating repository event
         run: |
-          curl -X POST https://api.github.com/repos/IgniteResearch/IgniteResearch/dispatches \
+          curl -X POST https://api.github.com/repos/IgniteResearch/dev-ir-web-app/dispatches \
           -H 'Accept: application/vnd.github.everest-preview+json' \
           -u ${{ secrets.SAML_GITHUB_TOKEN }} \
           --data '{"event_type": "ping", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
