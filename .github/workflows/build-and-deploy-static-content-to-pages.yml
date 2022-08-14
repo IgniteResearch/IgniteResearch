@@ -39,15 +39,6 @@ jobs:
           cache: "npm"
       - name: Build & deploy
         run: |
-          ls -la
-          cd ../
-          mkdir new
-          ls -la 
-          cd new
-          mv ../IgniteResearch/*  ./
-          ls -la
-          git config --global user.email "gsaikoushik@yahoo.com"
-          git config --global user.name "skgandikota"
           npm install && npm run-script deploy
         env:
           GITHUB_TOKEN: ${{ secrets.SAML_GITHUB_TOKEN }}
