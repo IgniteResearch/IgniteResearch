@@ -39,8 +39,11 @@ jobs:
           cache: "npm"
       - name: Build & deploy
         run: |
-          rm -rf .git
-          git init
+          cd ../
+          mkdir new && cd new
+          mv ../igniteresearch/*  ./
+          ls -la
+          git remote remove origin
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/dev-ir-web-app.git
           npm install && npm run-script deploy -- -u "github-actions-bot <support+actions@github.com>"
         env:
