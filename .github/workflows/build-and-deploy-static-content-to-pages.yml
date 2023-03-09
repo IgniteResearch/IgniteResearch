@@ -39,7 +39,6 @@ jobs:
   #         -u ${{ secrets.SAML_GITHUB_TOKEN }} \
   #         --data '{"event_type": "ping", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
   deploy-to-prod:
-    needs: deploy-to-dev
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
